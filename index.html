@@ -2,93 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sweet Bites Bakery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Bites Bakery - Fresh Cakes, Cookies & More in Lahore</title>
+  <meta name="description" content="Delicious homemade cakes, cookies, and treats from Sweet Bites Bakery in Lahore. Order online or visit our shop for fresh desserts." />
+  <meta name="keywords" content="sweet bites bakery, lahore bakery, homemade cakes, cupcakes, cookies, fresh bakery Pakistan" />
+  <meta name="author" content="Sweet Bites Bakery" />
+  <link rel="canonical" href="https://muhammadharoon37.github.io/bakery-pro" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fff8f2;
+      background: #fffefc;
       color: #333;
+      scroll-behavior: smooth;
     }
     header {
-      background: #ff6f61;
+      background: linear-gradient(to right, #d35400, #e67e22);
       color: white;
-      padding: 20px 10px;
+      padding: 40px 20px;
       text-align: center;
+      position: relative;
+      animation: slideInDown 1s ease-out;
+    }
+    @keyframes slideInDown {
+      from {transform: translateY(-100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
     }
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .hero {
+      text-align: center;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
     .menu-item {
       background: #fff;
-      border: 1px solid #ffd1c1;
-      border-left: 5px solid #ff6f61;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      width: 100%;
       border-radius: 10px;
-      padding: 15px 20px;
-      margin: 20px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     footer {
-      background: #ff6f61;
+      background: #d35400;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
     }
-    @media screen and (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      section {
-        padding: 20px 10px;
-      }
+    .blog {
+      background: #fef9f5;
+      padding: 40px 20px;
+    }
+    .blog h3 {
+      margin-bottom: 10px;
+    }
+    .blog-post {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #d35400;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Sweet Bites Bakery</h1>
+    <p>Fresh Cakes • Cookies • Cupcakes</p>
     <nav>
       <a href="#about">About</a>
       <a href="#menu">Menu</a>
+      <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <section class="hero">
+    <h2>Made with Love, Baked to Perfection</h2>
+    <p>We deliver the best homemade bakery experience in Lahore!</p>
+    <img src="https://source.unsplash.com/800x400/?cake,bakery" alt="Sweet Bites Cake" />
+  </section>
+
   <section id="about">
     <h2>About Us</h2>
-    <p>We bake fresh cakes, cookies, and bread daily with premium ingredients and lots of love. Visit us to experience the real taste of joy!</p>
+    <p>At Sweet Bites Bakery, we bake everything fresh daily using the finest ingredients. Our mission is to bring joy to your taste buds with handmade cakes, cookies, and more!</p>
   </section>
 
   <section id="menu">
     <h2>Our Menu</h2>
-    <div class="menu-item">
-      <h3>Chocolate Cake</h3>
-      <p>Rich, moist chocolate cake with creamy frosting. Perfect for celebrations.</p>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://source.unsplash.com/400x300/?chocolate-cake" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <p>Moist and rich chocolate layers topped with ganache.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://source.unsplash.com/400x300/?cookies" alt="Cookies">
+        <h3>Butter Cookies</h3>
+        <p>Crunchy, buttery, and melt-in-your-mouth flavor.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://source.unsplash.com/400x300/?cupcakes" alt="Cupcakes">
+        <h3>Vanilla Cupcakes</h3>
+        <p>Fluffy cupcakes topped with creamy vanilla frosting.</p>
+      </div>
     </div>
-    <div class="menu-item">
-      <h3>Butter Cookies</h3>
-      <p>Delicious, crunchy cookies baked to golden perfection.</p>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>Latest from Our Blog</h2>
+    <div class="blog-post">
+      <h3>Why Homemade Tastes Better</h3>
+      <p>We believe in freshness and flavor — here’s why our handmade treats outshine the rest...</p>
     </div>
-    <div class="menu-item">
-      <h3>Garlic Bread</h3>
-      <p>Freshly baked bread with garlic butter and herbs. A customer favorite!</p>
+    <div class="blog-post">
+      <h3>Top 5 Cakes for Birthday Parties</h3>
+      <p>Looking for the perfect cake for a birthday? Check out our best-sellers that make every celebration sweet!</p>
     </div>
   </section>
 
@@ -100,7 +161,8 @@
   </section>
 
   <footer>
-    <p>© 2025 Sweet Bites Bakery. All rights reserved.</p>
+    <p>© 2025 Sweet Bites Bakery | Designed with ♥</p>
   </footer>
+
 </body>
 </html>
